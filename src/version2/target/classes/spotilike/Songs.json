@@ -1,84 +1,82 @@
 [
-    {
-        "title": "Ghost Town",
-        "artist": "Arcando & ThatBehavior",
-        "year": "2016",
-        "genre": "Electronic",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Arcando & ThatBehavior - Ghost Town (feat. Vanessa Campagna) [NCS Release].wav"
-
-      },
-      {
-        "title": "Tanzen",
-        "artist": "Checkie Brown",
-        "year": "2017",
-        "genre": "Soul",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Checkie-Brown-Tanzen.wav"
-
-      },
-      {
-        "title": "Espiral",
-        "artist": "Electronautae",
-        "year": "2013",
-        "genre": "Experimental",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Espiral.wav"
-
-      },
-      {
-        "title": "Golden",
-        "artist": "The Empire",
-        "year": "2016",
-        "genre": "Pop Rock",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Golden-Empire-The-126ers.wav"
-
-      },
-      {
-        "title": "Mujer Karateka",
-        "artist": "Electronautae",
-        "year": "2013",
-        "genre": "Experimental",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Mujer-Karateka.wav"
-
-      },
-      {
-        "title": "Danzon",
-        "artist": "Jimena Contreras",
-        "year": "2015",
-        "genre": "Danzon",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Old-Movie-Danzon-Jimena-Contreras.wav"
-
-      },
-      {
-        "title": "Pasillo de Espejos",
-        "artist": "Electronautae",
-        "year": "2013",
-        "genre": "Experimental",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Pasiilo de Espejos.wav"
-
-      },
-      {
-        "title": "Play Dead",
-        "artist": "NEFFEX",
-        "year": "2014",
-        "genre": "Electronic/Hip Hop",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Play-Dead-NEFFEX.wav"
-
-      },
-      {
-        "title": "Storybook",
-        "artist": "Scott Holmes",
-        "year": "2019",
-        "genre": "Instrumental",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Scott-Holmes-Storybook.wav"
-
-      },
-      {
-        "title": "Vaquero Intergalactico",
-        "artist": "Electronautae",
-        "year": "2013",
-        "genre": "Experimental",
-        "filePath":"/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Vaquero Intergalactico.wav"
-
-      }
-     
-
+  {
+    "title": "Ghost Town",
+    "artist": "Arcando & ThatBehavior",
+    "year": "2016",
+    "genre": "Electronic",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Arcando & ThatBehavior - Ghost Town (feat. Vanessa Campagna) [NCS Release].wav"
+  },
+  {
+    "title": "Tanzen",
+    "artist": "Checkie Brown",
+    "year": "2017",
+    "genre": "Soul",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Checkie-Brown-Tanzen.wav"
+  },
+  {
+    "title": "Espiral",
+    "artist": "Electronautae",
+    "year": "2013",
+    "genre": "Experimental",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Espiral.wav"
+  },
+  {
+    "title": "Golden",
+    "artist": "The Empire",
+    "year": "2016",
+    "genre": "Pop Rock",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Golden-Empire-The-126ers.wav"
+  },
+  {
+    "title": "Mujer Karateka",
+    "artist": "Electronautae",
+    "year": "2013",
+    "genre": "Experimental",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Mujer-Karateka.wav"
+  },
+  {
+    "title": "Danzon",
+    "artist": "Jimena Contreras",
+    "year": "2015",
+    "genre": "Danzon",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Old-Movie-Danzon-Jimena-Contreras.wav"
+  },
+  {
+    "title": "Pasillo de Espejos",
+    "artist": "Electronautae",
+    "year": "2013",
+    "genre": "Experimental",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Pasiilo de Espejos.wav"
+  },
+  {
+    "title": "Play Dead",
+    "artist": "NEFFEX",
+    "year": "2014",
+    "genre": "Electronic/Hip Hop",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Play-Dead-NEFFEX.wav"
+  },
+  {
+    "title": "Storybook",
+    "artist": "Scott Holmes",
+    "year": "2019",
+    "genre": "Instrumental",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Scott-Holmes-Storybook.wav"
+  },
+  {
+    "title": "Vaquero Intergalactico",
+    "artist": "Electronautae",
+    "year": "2013",
+    "genre": "Experimental",
+    "isFavorite": false,
+    "filePath": "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/wav/Vaquero Intergalactico.wav"
+  }
 ]

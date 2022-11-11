@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.*;
 
 import javax.sound.sampled.*;
+import javax.swing.JOptionPane;
 
 import org.json.simple.*;
 import org.json.simple.parser.*;;;
@@ -21,7 +22,9 @@ public class Spotilike
   String title;
   String artist;
   String year;
-  String genre;
+  static String genre;
+  static boolean isFavorite;
+  static String heartSong;
 
   // Declarar scanner static para usarlo en todos los metodos
 
@@ -65,7 +68,7 @@ public class Spotilike
 
   // Everything start here because of MAIN
   // Scanner for user input
-  public static void main(final String[] args) {
+  public static void main(final String[] args) throws IOException {
 
     Scanner input = new Scanner(System.in);
 
@@ -115,7 +118,7 @@ public class Spotilike
   }
 
   // handles the user input for the app
-  public static void handleMenu(String userInput) {
+  public static void handleMenu(String userInput) throws IOException {
 
     String jsonPath = "/Users/Edgar/Documents/GitHub/Spotilike1/src/part1/src/main/java/spotilike/Songs.json";
 
@@ -129,9 +132,7 @@ public class Spotilike
       case "h":
         System.out.println("   " + " --> Home <--\n");
 
-        break;
-
-      // SEARCH BY TITLE
+        // SEARCH BY TITLE
       case "s":
 
         System.out.println("--> Search by Title <--");
@@ -144,11 +145,10 @@ public class Spotilike
         String artist;
         String year;
         String genre;
+
         String filePath;
 
         for (Integer i = 0; i < jsonData.size(); i++) {
-
-          // parse the object and pull out the name and filePath
 
           obj = (JSONObject) jsonData.get(i);
 
@@ -158,16 +158,36 @@ public class Spotilike
           genre = (String) obj.get("genre");
           filePath = (String) obj.get("filePath");
 
+          // parse the object and pull out the name and filePath
+
           if (nameInputSong.equals(title)) {
 
             System.out.println(
-                "\nPlaying: " + title + " by " + artist + " // " + year + " // " + genre + "\n" + filePath + "\n");
+                "\nPlaying: " + title + " by " + artist + " // " + year + " // " + genre + "\n"
+                    + filePath + "\n");
 
             play(filePath);
 
-          }
-        }
+            do {
+              heartSong = JOptionPane.showInputDialog("Do you want to save this song as a favorite? (Y/N)");
+            }
 
+            while (heartSong.equalsIgnoreCase("Y") == false && heartSong.equalsIgnoreCase("N") == false);
+            if (heartSong.equalsIgnoreCase("Y")) {
+
+              JOptionPane.showMessageDialog(null, "Song saved as favorite");
+
+              // save the song in some place IDK
+
+            } else if (heartSong.equalsIgnoreCase("N")) {
+
+              JOptionPane.showMessageDialog(null, "OK, this song won't be save in your favorite playlist");
+
+            }
+
+          }
+
+        }
         break;
 
       case "l":
@@ -185,54 +205,39 @@ public class Spotilike
         Integer i = optionNU - 1;
 
         obj = (JSONObject) jsonData.get(i);
+
         title = (String) obj.get("title");
         artist = (String) obj.get("artist");
         year = (String) obj.get("year");
         genre = (String) obj.get("genre");
+        ////////////////// isFavorite = (Boolean) obj.get(obj);
         filePath = (String) obj.get("filePath");
 
+        // if (isFavorite == false) { System.out.println("el valor es falso bro");}
+
         System.out
-            .println("\nPlaying: " + title + " by " + artist + " // " + year + " // " + genre + "\n" + filePath + "\n");
-
-        switch (optionNU) {
-
-          case 1:
-            break;
-
-          case 2:
-            break;
-
-          case 3:
-            break;
-
-          case 4:
-            break;
-
-          case 5:
-            break;
-
-          case 6:
-            break;
-
-          case 7:
-            break;
-
-          case 8:
-            break;
-
-          case 9:
-            break;
-
-          case 10:
-            break;
-          default:
-            System.out.println("Option no valid, please try again bro");
-
-        }
+            .println("\nPlaying: " + title + " by " + artist + " // " + year + " // " +
+                genre + "\n" + filePath + "\n");
 
         // play always starts from the beggining
         play(filePath);
-        break;
+
+        do {
+          heartSong = JOptionPane.showInputDialog("Do you want to save this song as a favorite? (Y/N)");
+        }
+
+        while (heartSong.equalsIgnoreCase("Y") == false && heartSong.equalsIgnoreCase("N") == false);
+        if (heartSong.equalsIgnoreCase("Y")) {
+
+          JOptionPane.showMessageDialog(null, "Song saved as favorite");
+
+          // save the song in some place IDK
+
+        } else if (heartSong.equalsIgnoreCase("N")) {
+
+          JOptionPane.showMessageDialog(null, "OK, this song won't be save in your favorite playlist");
+
+        }
 
       case "p":
         audioClip.start();
@@ -258,6 +263,19 @@ public class Spotilike
       case "o":
         position = audioClip.getMicrosecondPosition();
         audioClip.setMicrosecondPosition(position + 5000000);
+        break;
+
+      case "f":
+        String favorite = "";
+
+        FileReader file = new FileReader(
+            "/Users/Edgar/Documents/GitHub/Spotilike2/src/version2/src/main/java/spotilike/Songs.json");
+        int ch;
+        while ((ch = file.read()) != -1)
+          favorite += (char) ch;
+
+        System.out.println(favorite);
+
         break;
 
       case "r":
